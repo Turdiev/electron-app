@@ -1,7 +1,11 @@
 const { app, BrowserWindow } = require('electron');
 
+/* Проверка обновлений */
+require('update-electron-app')();
+
 /* Инициализация приложения */
 const init = () => {
+
   /* Создаем окно браузера */
   const mainWindow = new BrowserWindow();
 
