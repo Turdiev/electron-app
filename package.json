@@ -1,22 +1,24 @@
 {
-  "name": "self-updating-test-app",
-  "version": "0.0.1",
-  "main": "src/main.js",
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "electron": "^13.1.1",
+    "electron-builder": "^22.10.5",
+    "electron-updater": "^4.3.9"
+  },
+  "devDependencies": {},
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder",
-    "ship": "electron-builder -p always",
-    "ship:all": "electron-builder -mwl --x64 --ia32 -p always"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "electronics-builder build --win --publish never",
+    "deploy": "electronics-builder build --win --publish always"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/Turdiev/electron-app.git"
   },
-  "devDependencies": {
-    "electron": "^12.0.9",
-    "electron-builder": "^22.10.5"
-  },
-  "dependencies": {
-    "update-electron-app": "^2.0.1"
-  }
+  "author": "",
+  "license": "ISC"
 }
