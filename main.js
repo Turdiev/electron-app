@@ -10,17 +10,18 @@ function createWindow() {
         height: 600,
         webPreferences: {
             nodeIntegration: true,
+            contextIsolation: false,
         },
     });
     mainWindow.loadFile('index.html');
     mainWindow.on('closed', function () {
         mainWindow = null;
     });
-}
 
-mainWindow.once('ready-to-show', () => {
-    autoUpdater.checkForUpdatesAndNotify();
-});
+    mainWindow.once('ready-to-show', () => {
+        autoUpdater.checkForUpdatesAndNotify();
+    });
+}
 
 app.on('ready', () => {
     createWindow();
